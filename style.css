@@ -1,0 +1,291 @@
+/* === STYLE UMUM (semua halaman) === */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Soft light background, lebih kalem dan profesional */
+    background: #f4f7f9;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50; /* Warna teks lebih gelap dan profesional */
+    line-height: 1.6;
+}
+
+/* Container untuk halaman non-dashboard (login, register, dll.) */
+.container {
+    width: 90%;
+    max-width: 450px; /* Sedikit lebih lebar */
+    background: #ffffff;
+    margin: 80px auto; /* Lebih banyak margin atas */
+    padding: 30px 40px;
+    border-radius: 16px; /* Lebih rounded */
+    /* Shadow yang lebih halus dan dalam untuk efek floating card */
+    box-shadow: 0 15px 30px rgba(44, 62, 80, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-2px);
+}
+
+/* Container khusus untuk dashboard (lebih lebar) */
+.dashboard-container {
+    max-width: 1300px;
+    width: 95%;
+    padding: 30px 20px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    color: #0077b6; /* Warna utama yang profesional (Biru/Cyan) */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    /* Border lebih subtle dan rapi */
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    color: #2c3e50; /* Judul sub-section menggunakan warna teks utama */
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #0077b6; /* Warna link yang terpadu */
+    text-decoration: none;
+    transition: color 0.2s, border-bottom 0.2s;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #005d9c;
+    text-decoration: none;
+    border-bottom: 1px solid #005d9c; /* Efek hover yang lebih elegan */
+}
+
+/* === FORM UMUM === */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cccccc; /* Border lebih jelas tapi tetap soft */
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    border-color: #0077b6; /* Fokus dengan warna utama */
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.2);
+}
+
+/* === BUTTONS === */
+button, .button-link {
+    display: inline-block;
+    background-color: #0077b6; /* Warna primary baru */
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.1s, box-shadow 0.2s;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 119, 182, 0.2);
+}
+
+button:hover, .button-link:hover {
+    background-color: #005d9c; /* Hover darker primary */
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(0, 119, 182, 0.3);
+}
+
+.logout-button {
+    background-color: #dc3545; /* Merah standar untuk peringatan */
+    box-shadow: 0 4px 6px rgba(220, 53, 69, 0.2);
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    box-shadow: 0 6px 8px rgba(220, 53, 69, 0.3);
+}
+
+.primary-button {
+    background-color: #2c3e50; /* Warna yang lebih tegas/sekunder */
+    box-shadow: 0 4px 6px rgba(44, 62, 80, 0.15);
+}
+
+.primary-button:hover {
+    background-color: #1f2c3d;
+    box-shadow: 0 6px 8px rgba(44, 62, 80, 0.25);
+}
+
+/* === DASHBOARD LAYOUT KHUSUS === */
+.dashboard-header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.dashboard-header h2 {
+    margin-top: 0;
+}
+
+.user-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Product Management Section */
+.product-management {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Shadow yang lebih terlihat */
+}
+
+.action-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+/* === TABEL === */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.data-table th, .data-table td {
+    padding: 15px 20px; /* Padding lebih besar */
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0; /* Garis pemisah lebih soft */
+}
+
+.data-table th {
+    background: #4bb3ec; /* Header menggunakan warna primary yang harmonis */
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.data-table tr:last-child td {
+    border-bottom: none;
+}
+
+.data-table tr:nth-child(even) {
+    background: #f9fbfc; /* Warna selang-seling yang sangat lembut */
+}
+
+.data-table tr:hover {
+    background: #eef7ff; /* Hover dengan warna light blue */
+    transition: background-color 0.2s ease;
+}
+
+.action-links a {
+    margin-right: 10px;
+    padding: 5px 0;
+    white-space: nowrap;
+}
+
+.action-links .separator {
+    color: #b0b0b0;
+}
+
+.delete-link {
+    color: #dc3545;
+}
+
+.delete-link:hover {
+    color: #c82333;
+}
+
+.no-data {
+    text-align: center;
+    color: #2c3e50;
+    padding: 20px;
+    background: #ffffff; /* Light blue/primary background */
+    border: 1px solid #b3d9ff;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* === ALERT & PESAN (Contoh) === */
+.message {
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.success {
+    background: #d4edda;
+    color: #155724;
+    border-color: #c3e6cb;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .dashboard-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .user-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .user-actions a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
